@@ -1,16 +1,37 @@
-const Navbar = (props) => {
-    return (
-    <div>
-        <h1>{props.bakeryName}</h1>
-        <ul className="navItems">
-            <li>Menu</li>
-            <li>About</li>
-            <li>Location</li>
-            <li>Cake Gallery</li>
-            <li>Reviews</li>
-        </ul>
-    </div>
-    )
-}
+import { Link } from "react-router-dom";
+import hamburger from '../hamburger.png';
 
-export default Navbar
+const Navbar = (props) => {
+  return (
+    <div className="navbar">
+      <div className="navContainer">
+        <div className="icon">
+         <img src={hamburger} height="30px"/>
+        </div>
+        <h1 className="bakeryName">{props.bakeryName}</h1>
+      </div>
+
+      <div className="navItemsContainer">
+        <ul className="navItems">
+          <Link to="/menu">
+            <li>Menu</li>
+          </Link>
+          <Link to="/about">
+            <li>About</li>
+          </Link>
+          <Link to="/location">
+            <li>Location</li>
+          </Link>
+          <Link to="/gallery">
+            <li>Gallery</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

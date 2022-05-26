@@ -1,15 +1,16 @@
 import useState from "react"
 
 const Topbar = (props) => {
-    const [showTopbar,setShowTopbar] = useState(true);
+    //const [showTopbar,setShowTopbar] = useState(true);
     const removeTopbar = () => {
-
+        var elem = document.getElementById("topbar");
+        elem.setAttribute("style", "display:none");
     }
 
     return (
-        <div className="topbar">
+        <div id="topbar" className="topbar">
             <p className="topbarMessage">{props.message}</p>
-            <button className="topbarButton" onClick={removeTopbar}>Close Bar</button>
+            <button id="topbarButton" className="topbarButton" onClick={removeTopbar}>Close Bar</button>
         </div>
     )
 }
