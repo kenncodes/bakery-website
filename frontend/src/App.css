@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@1,500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@
 .App {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  font-family: 'Expletus Sans', cursive;
   font-weight: 200;
 }
 
@@ -32,6 +34,7 @@
   justify-content: space-between;
   flex: wrap;
   padding: 10px;
+  background-color:antiquewhite;
 }
 .navContainer{
   display:flex;
@@ -49,7 +52,8 @@
   cursor:pointer;
 }
 .bakeryName{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Expletus Sans', cursive;
+  
 }
 .navItems {
   display:flex;
@@ -60,11 +64,10 @@
 }
 
 .navItems > a > li{
-  padding:0px 15px;
+  margin:0px 15px;
 }
 
 .banner{
-
 
 }
 
@@ -97,7 +100,7 @@ justify-content: center;
 align-items:center;
 }
 .navItem{
-  padding:10px;
+  margin:10px;
 }
 
 
@@ -106,6 +109,16 @@ align-items:center;
 }
 .bannerImg{
   height:30vw;
+}
+
+.locationCard{
+  background-color:rgb(162, 141, 182);
+  padding:30px;
+  border-radius:10px;
+}
+
+.location{
+  align-items: center;
 }
 @media only screen and (max-width: 900px){
   body{
@@ -117,12 +130,12 @@ align-items:center;
  
   .navbar{
     text-align:center;
-    justify-content: center;
+    justify-content: space-between;
   }
   .navContainer{
     text-align:center;
     display:flex;
-    justify-content: center !important;
+    justify-content: space-between !important;
   }
   .flagImage{
     display:none;

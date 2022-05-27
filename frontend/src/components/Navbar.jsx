@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import hamburger from '../hamburger.png';
+import { useState } from "react";
 
 const Navbar = (props) => {
+
+  const [showMobileMenu,setShowMobileMenu] = useState(false);
+  
   return (
     <div className="navbar">
       <div className="navContainer">
