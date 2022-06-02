@@ -7,7 +7,9 @@ const Banner = () => {
   return (
     <div className="banner">
       <img className="bannerImg" alt="bakery" src={pastryshop} width="100%"/>
+    
     </div>
+
   );
 };
 

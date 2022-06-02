@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   flex: wrap;
-  padding: 10px;
+  padding: 10px 20px;;
   background-color:antiquewhite;
 }
 .navContainer{
