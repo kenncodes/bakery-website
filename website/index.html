@@ -14,6 +14,13 @@
       crossorigin="anonymous"
     />
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@1,500&family=Merienda:wght@400;700&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -35,12 +42,13 @@
     <title>Bakery</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Awesome Bakery 
-        <div style="float:right;padding-left:10px;">
-        <img src="./images/flag.png" width="30px" />
-      </div></a>
- 
+    <nav class="navbar navbar-expand-md navbar-light">
+      <a class="navbar-brand" href="#"
+        >Awesome Bakery
+        <div class="flagContainer">
+          <img src="./images/flag.png" width="30px" /></div
+      ></a>
+
       <button
         class="navbar-toggler"
         type="button"
@@ -56,14 +64,11 @@
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+              >Menu <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Gallery</a>
@@ -72,13 +77,13 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
-      
       </div>
-    
     </nav>
 
     <div id="myRow">
-      <div id="left"></div>
+      <div id="left">
+        <img id="mobileBanner" src="./images/storefront3.jpg" width="100%" />
+      </div>
       <div id="right">
         <div id="top-right">
           <span class="sectionTitle"> Menu </span>
@@ -90,15 +95,44 @@
     </div>
 
     <style>
+      .navbar {
+        background-color: rgb(199, 222, 217);
+        background-color: rgb(235, 207, 177);
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .navbar-brand {
+        font-size: 26px;
+        font-family: "Merienda", cursive;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        color: rgb(39, 31, 31);
+      }
+      .nav-link {
+        font-size: 18px;
+        font-family:  sans-serif;
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        font-style: bold;
+      }
+      .flagContainer {
+        float: right;
+        padding-left: 10px;
+      }
       .sectionTitle {
         border-radius: 20px;
         background-color: rgb(255, 255, 255);
+        margin: 30px;
         padding: 10px;
         color: orange;
       }
+      #mobileBanner {
+        display: none;
+      }
       #top-right {
         flex: 1;
-        background-image: url("./images/tartssquare.png");
+        background-image: url("./images/salara.jpg");
         background-size: cover;
         margin: 10px;
         display: flex;
@@ -111,11 +145,11 @@
         font-weight: 900;
         transition: margin 0.1s;
       }
-  
+
       #top-right:hover {
         margin: 8px;
         cursor: pointer;
-       
+
         color: rgb(255, 255, 255);
         display: flex;
         justify-content: center;
@@ -125,7 +159,7 @@
         margin: 8px;
         cursor: pointer;
       }
-  
+
       #bottom-right {
         flex: 1;
         background-image: url("./images/cake.jpg");
@@ -143,14 +177,14 @@
         transition: margin 0.1s;
       }
       #myRow {
-        height: 600px;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
       }
       #left {
-        background-image: url("./images/storefront.jpg");
+        background-image: url("./images/storefront3.jpg");
         background-size: 100% 100%;
+        height: 600px;
         background-repeat: no-repeat;
         flex: 65%;
         margin: 10px;
@@ -164,59 +198,190 @@
       }
       #trImg {
       }
-   
+
       @media (max-width: 800px) {
+        #mobileBanner {
+          display: block;
+          background-size: contain;
+        }
+        #myRow {
+        }
+        #top-right{
+          background-image: url("./images/salara.jpg");
+        }
         #top-right,
         #bottom-right {
-          height: 200px !important;
           background-size: cover;
         }
-        #row {
-          flex-direction: column;
-        }
+
         #left {
-          flex: 100%;
+          height: fit-content;
+          background-image: none;
           background-size: cover;
           background-position: 10%;
+          flex: 100%;
         }
         #right {
-          flex: 50%;
           flex-direction: row;
+          height: fit-content;
         }
       }
 
       @media (max-width: 500px) {
+        #myRow {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+        }
         #top-right,
         #bottom-right {
-          height: 100px !important;
+          padding: 25px;
           background-size: cover;
         }
         #row {
           flex-direction: column;
         }
         #left {
-          flex: 100%;
+          background-image: none;
+          height: auto;
           background-size: cover;
           background-position: 10%;
         }
         #right {
-          flex: 50%;
+          height: fit-content;
           flex-direction: column;
         }
       }
     </style>
 
-    <div id="pitch">
-      The best Caribbean baked goods in New York City
+    <div id="pitch">The best baked goods in New York City since 1981</div>
+    <div id="aboutContainer">
+      <img id="cakephoto" src="./images/foods2.jpg" />
+      <h2 class="aboutText">
+        Since 1981, we've served the metro area with delicious breads, rolls,
+        puddings, tarts, and sweets with an authentic Caribbean taste.
+      </h2>
+  
+    </div>
+    <div style="margin-bottom: 30px;">
+      
     </div>
     <style>
-      #pitch{
+      #pitch {
         text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 30px;
-        padding:10px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 40px;
+        padding: 10px;
+        font-variant: small-caps;
+      }
+      #aboutContainer {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Merienda", cursive;
+        font-family: "Montserrat", sans-serif;
+        align-items: center;
+        justify-content: center;
+        padding: 0% 5%;
+      }
+      #cakephoto {
+        flex: 1;
+        width: 40vw;
+        text-align: center;
+      }
+      .aboutText {
+        flex: 1;
+        padding: 20px;
+
+        font-size: 3vw;
+        margin: 20px;
+      }
+
+      @media (max-width: 600px) {
+        #cakephoto {
+          width: 400px;
+        }
+        .aboutText{
+          font-size: 20px;
+        }
       }
     </style>
-  </body>
+<div class="menuSection">
 
+
+    <h1>Popular Items</h1>
+    <div class="menuContainer">
+      <div class="menuItemCard">
+        <img class="menuItemImage" src="./images/plaitbread.jpg" />
+        <h3>Plait Bread</h3>
+        <p>5.00</p>
+      </div>
+      <div class="menuItemCard">
+        <img class="menuItemImage" src="./images/beefpatty.jpg" />
+        <h3>Beef Patty</h3>
+        <p>6 for 4.00</p>
+      </div>
+      <div class="menuItemCard">
+        <img class="menuItemImage" src="./images/salara2.jpg" />
+        <h3>Salara</h3>
+        <p>3.00</p>
+      </div>
+      <div class="menuItemCard">
+        <img class="menuItemImage" src="./images/tartssquare.png" />
+        <h3>Coconut Tarts</h3>
+        <p>3.00</p>
+      </div>
+    </div>
+    <div id="menuLink">
+      <a href="/menu">
+        <h2>View the full Menu</h2>
+      </a>
+    </div>
+  </div>
+    <h2>
+    
+    </h2>
+
+    <div id="aboutContainer">
+      <img id="cakephoto" src="./images/cakepam.png" />
+      <h2 class="aboutText">
+        We also provide beautifully decorated cakes for birthdays, holidays,
+        or any celebration.
+      </h2>
+    </div>
+    <div style="margin-bottom: 30px;">
+      
+    </div>
+    <style>
+      .menuSection{
+        background-color: aliceblue;
+        padding: 10px;
+      }
+      #menuLink{
+text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      .menuContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+      .menuItemCard {
+        border-radius: 10px;
+        padding: 5px;
+        width: min-content;
+      }
+      .menuItemImage {
+        max-width: 200px;
+        height: 200px;
+        padding: 10px;
+        background-color: azure;
+        background-color: rgb(204, 204, 205);
+      }
+    </style>
+    <div id="galleryContainer"></div>
+  </body>
 </html>
