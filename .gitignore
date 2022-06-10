@@ -3,6 +3,8 @@
 *.png
 *.jpg
 
+../frontend
+
 # Logs
 logs
 *.log

@@ -1,0 +1,26 @@
+.navbar {
+    background-color: rgb(199, 222, 217);
+    background-color: rgb(235, 207, 177);
+    background-color: rgb(25, 210, 176);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  .navbar-brand {
+    font-size: 26px;
+    font-family: "Merienda", cursive;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: rgb(39, 31, 31);
+  }
+  .nav-link {
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-style: bold;
+  }
+  .flagContainer {
+    float: right;
+    padding-left: 10px;
+  }
