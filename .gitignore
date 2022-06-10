@@ -1,9 +1,6 @@
 #Pictures
-../website/images
-*.png
-*.jpg
+./images/storefront.jpg
 
-../frontend
 
 # Logs
 logs
